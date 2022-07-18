@@ -11,6 +11,9 @@ public class Application {
 
 //        SpeakerService service = new SpeakerServiceImpl(); // we don't need this anymore because using bean factory to create instances in AppConfig file
         SpeakerService service = applicationContext.getBean("speakerService", SpeakerService.class);
+        System.out.println(service);
+        SpeakerService service2 = applicationContext.getBean("speakerService", SpeakerService.class);
+        System.out.println(service2); //service2 is same instance as service
 
         System.out.println(service.findAll().get(0).getFirstName());
     }
