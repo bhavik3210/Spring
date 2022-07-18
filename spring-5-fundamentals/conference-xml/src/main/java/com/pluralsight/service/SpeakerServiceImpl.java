@@ -8,12 +8,14 @@ import java.util.List;
 
 public class SpeakerServiceImpl implements SpeakerService {
 
-    private SpeakerRepository repository = new HibernateSpeakerRepositoryImpl();
+    private SpeakerRepository repository;
 
     public SpeakerServiceImpl() {
+        System.out.println("SpeakerServiceImpl NO ARGS Constructor");
     }
 
     public SpeakerServiceImpl(SpeakerRepository repository) {
+        System.out.println("SpeakerServiceImpl REPOSITORY Constructor");
         this.repository = repository;
     }
 
@@ -23,6 +25,7 @@ public class SpeakerServiceImpl implements SpeakerService {
     }
 
     public void setSpeakerRepository(SpeakerRepository repository) {
+        System.out.println("SpeakerServiceImpl SETTER");
         this.repository = repository;
     }
 }
