@@ -2,3 +2,10 @@ logging:
   level:
     org:
       springframework: DEBUG
+spring:
+  datasource:
+    url: jdbc:h2:mem:bugtracker
+  h2:
+    console:
+      enabled: true
+      path: /h2
